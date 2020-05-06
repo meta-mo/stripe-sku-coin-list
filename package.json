@@ -1,6 +1,6 @@
 {
   "name": "stripe-skus-json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Get the list of items from Stripe and save this JSON to the specified path.",
   "main": "index.js",
   "scripts": {
