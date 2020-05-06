@@ -1,0 +1,36 @@
+{
+  "name": "stripe-skus-json",
+  "version": "0.1.0",
+  "description": "Get the list of items from Stripe and save this JSON to the specified path.",
+  "main": "index.js",
+  "scripts": {
+    "test": "env $(cat .env) node index.js --path tests/testSKUs.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meta-mo/stripe-skus-json.git"
+  },
+  "author": "Passionate Engineer <ryozu256@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meta-mo/stripe-skus-json/issues"
+  },
+  "homepage": "https://github.com/meta-mo/stripe-skus-json#readme",
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "stripe": "^8.49.0"
+  },
+  "bin": {
+    "stripe-skus-json": "index.js"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5"
+  }
+}
