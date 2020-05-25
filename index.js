@@ -23,6 +23,8 @@ async function fetchStripeSkusJson(savePath, coin) {
     })
   }
 
+  skus.data.sort((a, b) => (a.price > b.price) ? 1 : (a.price < b.price) ? -1 : 0)
+
   const jsonData = JSON.stringify(skus.data)
   fs.mkdirSync(path.parse(savePath).dir, { recursive: true })
   fs.writeFileSync(savePath, jsonData)
